@@ -25,4 +25,4 @@ KVR组网需要把所有路由器都刷上支持KVR（至少要支持K）的固�
 
 看信道用wifianalyzer，测试漫游效果用wifi测评大师，查看KVR支持情况用win10电脑上的winfi
   
- 
+  
