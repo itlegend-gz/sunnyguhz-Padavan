@@ -2261,11 +2261,7 @@ static int koolproxy_status_hook(int eid, webs_t wp, int argc, char **argv)
 	return 0;
 }
 #endif
-#if defined (WEBUI_HIDE_VPN)
-	int support_vpn = 0;
-#else
-	int support_vpn = 1;
-#endif
+
 #if defined (APP_ADBYBY)
 static int adbyby_action_hook(int eid, webs_t wp, int argc, char **argv)
 {
