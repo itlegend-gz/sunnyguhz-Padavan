@@ -635,8 +635,6 @@ function show_menu(L1, L2, L3){
 	}
 
 	
-	}
-	
 	for (i=0;i<num_ephy;i++){
 		tablink[8][i+3] = "Main_EStatus_Content.asp#"+i.toString();
 		if (i>0)
