@@ -230,6 +230,12 @@ ifeq ($(CONFIG_FIRMWARE_INCLUDE_FRPC)_$(CONFIG_FIRMWARE_INCLUDE_FRPS), n_n)
 	rm -f $(INSTALLDIR)/www/Advanced_frp.asp
 endif
 
+ifeq ($(CONFIG_FIRMWARE_WEBUI_HIDE_VPN),y)
+	rm -f $(INSTALLDIR)/www/vpn_clients.asp
+	rm -f $(INSTALLDIR)/www/vpncli.asp
+	rm -f $(INSTALLDIR)/www/vpnsrv.asp
+endif
+
 clean:
 	@echo "Clean www romfs"
 
