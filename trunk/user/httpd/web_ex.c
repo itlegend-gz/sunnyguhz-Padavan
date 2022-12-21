@@ -2839,7 +2839,7 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 		"function support_5g_band_steering() { return %d;}\n"
 		"function support_sfe() { return %d;}\n"
 		"function support_lan_ap_isolate() { return %d;}\n"
-		"function support_5g_160mhz() { return %d;}\n",
+		"function support_5g_160mhz() { return %d;}\n"
 		"function support_5g_11ax() { return %d;}\n"
 		"function support_2g_11ax() { return %d;}\n",
 		has_ipv6,
@@ -2878,7 +2878,7 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
 		has_5g_mumimo,
 		has_sfe,
 		has_lan_ap_isolate,
-		has_5g_160mhz
+		has_5g_160mhz,
 		has_5g_11ax,
 		has_2g_11ax
 	);
