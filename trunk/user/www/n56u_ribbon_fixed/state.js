@@ -440,10 +440,6 @@ if (found_app_wyy()){
 	tabtitle[18] = new Array("", "<#menu5_31_1#>");
 }
 
-if (found_app_minieap()){
-	tabtitle[14] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
-}
-
 //Level 3 Tab title
 
 tablink[0] = new Array("", "Advanced_Wireless2g_Content.asp", "Advanced_WGuest2g_Content.asp", "Advanced_WMode2g_Content.asp", "Advanced_ACL2g_Content.asp", "Advanced_WSecurity2g_Content.asp", "Advanced_WAdvanced2g_Content.asp");
@@ -510,11 +506,6 @@ if (found_app_wyy()){
 	tablink[19] = (wyy_array);
 }
 
-if (found_app_minieap()){
-	minieap_array = new Array("","minieap.asp","minieap_log.asp");
-	tablink[14] = (minieap_array);
-}
-
 //Level 2 Menu
 menuL2_title = new Array(21)
 menuL2_title = new Array("", "<#menu5_11#>", "<#menu5_12#>", "<#menu5_2#>", "<#menu5_3#>", "<#menu5_5#>", "<#menu5_4#>", "<#menu5_6#>", "<#menu5_10#>", "<#menu5_9#>", "<#menu5_7#>");
@@ -532,6 +523,10 @@ if (found_app_shadowsocks()){
 
 if (found_app_mentohust()){
 	menuL2_title.push("<#menu5_18#>");
+} else menuL2_title.push("");
+
+if (found_app_minieap()){
+	menuL2_title.push("<#menu5_19#>");
 } else menuL2_title.push("");
 
 if (found_app_koolproxy()){
@@ -564,10 +559,6 @@ if (found_app_wyy()){
 	menuL2_title.push("<#menu5_31#>");
 } else menuL2_title.push("");
 
-if (found_app_minieap()){
-	menuL2_title.push("<#menu5_19#>");
-} else menuL2_title.push("");
-
 menuL2_link  = new Array("", tablink[0][1], tablink[1][1], tablink[2][1], tablink[3][1], tablink[4][1], tablink[5][1], tablink[6][1], tablink[7][1], support_2g_radio() ? tablink[8][1] : "Main_EStatus_Content.asp", tablink[9][1]);
 if (found_app_scutclient()){
 	menuL2_link.push(scutclient_array[1]);
@@ -584,6 +575,11 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	menuL2_link.push(mentohust_array[1]);
 } else menuL2_link.push("");
+
+if (found_app_minieap()){
+	menuL2_link.push(minieap_array[1]);
+} else menuL2_link.push("");
+
 if (found_app_adbyby()){
 	menuL2_link.push(ad_array[1]);
 } else if (found_app_koolproxy()){
@@ -607,10 +603,6 @@ if (found_app_caddy()){
 } else menuL2_link.push("");
 if (found_app_wyy()){
 	menuL2_link.push(wyy_array[1]);
-} else menuL2_link.push("");
-
-if (found_app_minieap()){
-	menuL2_link.push(minieap_array[1]);
 } else menuL2_link.push("");
 
 //Level 1 Menu in Gateway, Router mode
