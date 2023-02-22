@@ -1,4 +1,4 @@
-SRC_NAME = minieap-0.92.1-pdv
+SRC_NAME = minieap-0.93-pdv
 SRC_URL = https://github.com/hanwckf/minieap/archive/v0.92.1-pdv.zip
 THISDIR = $(shell pwd)
 
