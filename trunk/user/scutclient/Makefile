@@ -1,6 +1,6 @@
 # https://github.com/scutclient/scutclient.git
-SRC_NAME := scutclient-master
-SRC_URL = https://github.com/scutclient/scutclient/archive/refs/heads/master.zip
+SRC_NAME := scutclient-3.1.3
+SRC_URL = https://github.com/scutclient/scutclient/archive/v3.1.3.zip
 THISDIR = $(shell pwd)
 
 all: download_test extract_test config_test
