@@ -613,7 +613,7 @@ struct nvram_pair router_defaults[] = {
 	{ "mentohust_startmode", "1" },
 	{ "mentohust_dhcp", "0" },
 	{ "mentohust_daemon", "1" },
-	{ "mentohust_service", "0" },
+	{ "mentohust_service", "" },
 	{ "mentohust_ver", "0.00" },
 	{ "mentohust_datafile", "/etc/storage/mentohust/" },
 	{ "mentohust_dhcpscript", "" },
