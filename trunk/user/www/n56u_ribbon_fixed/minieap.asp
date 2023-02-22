@@ -296,7 +296,7 @@ function fill_status(status_code){
 
                                         <tr>
                                             <th colspan="2" style="color:dimgray;"> 
-                                                <center>Supported by 洛 & Powered by MiniEAP</center>
+                                                <center>Powered by MiniEAP</center>
                                             </th>    
                                         </tr>
 
