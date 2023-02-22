@@ -1,5 +1,5 @@
-SRC_NAME = minieap-0.93-pdv
-SRC_URL = https://github.com/OrdinaryJoys/minieap/archive/0.93-pdv.zip
+SRC_NAME = minieap-0.93
+SRC_URL = https://github.com/updateing/minieap/archive/v0.93.zip
 THISDIR = $(shell pwd)
 
 all: download_test extract_test
