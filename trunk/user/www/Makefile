@@ -191,6 +191,11 @@ ifneq ($(CONFIG_FIRMWARE_INCLUDE_MENTOHUST),y)
 	rm -f $(INSTALLDIR)/www/mentohust_log.asp
 	rm -f $(INSTALLDIR)/www/mentohust_action.asp
 endif
+ifneq ($(CONFIG_FIRMWARE_INCLUDE_MINIEAP),y)
+	rm -f $(INSTALLDIR)/www/minieap.asp
+	rm -f $(INSTALLDIR)/www/minieap_log.asp
+	rm -f $(INSTALLDIR)/www/minieap_action.asp
+endif
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER),y)
 	rm -f $(INSTALLDIR)/www/dns-forwarder.asp
 endif
@@ -200,11 +205,7 @@ ifneq ($(CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS),y)
 	rm -f $(INSTALLDIR)/www/Shadowsocks_log.asp
 endif
 
-ifeq ($(CONFIG_FIRMWARE_WEBUI_HIDE_VPN),y)
-	rm -f $(INSTALLDIR)/www/vpn_clients.asp
-	rm -f $(INSTALLDIR)/www/vpncli.asp
-	rm -f $(INSTALLDIR)/www/vpnsrv.asp
-endif
+
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_ADBYBY),y)
 	rm -f $(INSTALLDIR)/www/Advanced_adbyby.asp
 endif
@@ -229,6 +230,7 @@ endif
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_FRPC)_$(CONFIG_FIRMWARE_INCLUDE_FRPS), n_n)
 	rm -f $(INSTALLDIR)/www/Advanced_frp.asp
 endif
+
 
 clean:
 	@echo "Clean www romfs"

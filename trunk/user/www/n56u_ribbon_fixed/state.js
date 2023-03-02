@@ -403,6 +403,9 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	tabtitle[13] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
 }
+if (found_app_minieap()){
+	tabtitle[14] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
+}
 if (found_app_adbyby()){
 	tabtitle[14] = new Array("", "<#menu5_20_1#>");
 }
@@ -436,6 +439,7 @@ if (found_app_caddy()){
 if (found_app_wyy()){
 	tabtitle[18] = new Array("", "<#menu5_31_1#>");
 }
+
 //Level 3 Tab title
 
 tablink[0] = new Array("", "Advanced_Wireless2g_Content.asp", "Advanced_WGuest2g_Content.asp", "Advanced_WMode2g_Content.asp", "Advanced_ACL2g_Content.asp", "Advanced_WSecurity2g_Content.asp", "Advanced_WAdvanced2g_Content.asp");
@@ -463,6 +467,10 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	mentohust_array = new Array("","mentohust.asp","mentohust_log.asp");
 	tablink[13] = (mentohust_array);
+}
+if (found_app_minieap()){
+	minieap_array = new Array("","minieap.asp","minieap_log.asp");
+	tablink[14] = (minieap_array);
 }
 if (found_app_adbyby()){
 	ad_array = new Array("","Advanced_adbyby.asp");
@@ -514,7 +522,11 @@ if (found_app_shadowsocks()){
 } else menuL2_title.push("");
 
 if (found_app_mentohust()){
-	menuL2_title.push("mentohust");
+	menuL2_title.push("<#menu5_18#>");
+} else menuL2_title.push("");
+
+if (found_app_minieap()){
+	menuL2_title.push("<#menu5_19#>");
 } else menuL2_title.push("");
 
 if (found_app_koolproxy()){
@@ -563,6 +575,11 @@ if (found_app_shadowsocks()){
 if (found_app_mentohust()){
 	menuL2_link.push(mentohust_array[1]);
 } else menuL2_link.push("");
+
+if (found_app_minieap()){
+	menuL2_link.push(minieap_array[1]);
+} else menuL2_link.push("");
+
 if (found_app_adbyby()){
 	menuL2_link.push(ad_array[1]);
 } else if (found_app_koolproxy()){
@@ -589,8 +606,8 @@ if (found_app_wyy()){
 } else menuL2_link.push("");
 
 //Level 1 Menu in Gateway, Router mode
-menuL1_title = new Array("", "<#menu1#>", "", "<#menu2#>", "<#menu6#>", "<#menu4#>", "<#menu5_8#>", "<#menu5#>");
-menuL1_link = new Array("", "index.asp", "", "vpnsrv.asp", "vpncli.asp", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
+menuL1_title = new Array("", "<#menu1#>", "", "", "", "<#menu4#>", "<#menu5_8#>", "<#menu5#>");
+menuL1_link = new Array("", "index.asp", "", "", "", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
 menuL1_icon = new Array("", "icon-home", "icon-hdd", "icon-retweet", "icon-globe", "icon-tasks", "icon-random", "icon-wrench");
 
 function show_menu(L1, L2, L3){
@@ -617,10 +634,7 @@ function show_menu(L1, L2, L3){
 		menuL2_title[4] = "";
 		menuL2_link[5] = "";  //remove Firewall
 		menuL2_title[5] = "";
-		menuL1_link[3] = "";  //remove VPN svr
-		menuL1_title[3] = "";
-		menuL1_link[4] = "";  //remove VPN cli
-		menuL1_title[4] = "";
+		
 		
 		if (lan_proto == '1'){
 			tabtitle[2].splice(2,1);
@@ -637,6 +651,7 @@ function show_menu(L1, L2, L3){
 		}
 	}
 
+	
 	for (i=0;i<num_ephy;i++){
 		tablink[8][i+3] = "Main_EStatus_Content.asp#"+i.toString();
 		if (i>0)
